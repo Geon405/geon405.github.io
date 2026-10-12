@@ -56,6 +56,19 @@ ul.pts li{margin-bottom:8px}
 .proj dd{margin:0}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .tags span{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;color:var(--muted)}
+.sub{font-size:22px;margin:44px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.mini{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.mini h3{font-size:20px}
+.mini p{font-size:16px;color:var(--muted);margin:0}
+.mini .tags{margin-top:0}
+.mini a.repo{margin-top:auto;padding-top:6px;font-size:15px;color:var(--accent)}
+.lang{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px}
+.lang b{display:block;font-weight:500;margin-bottom:8px}
+.dots{display:flex;gap:6px}
+.dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--accent)}
+.dot.f{background:var(--accent)}
+.dot.h{background:linear-gradient(90deg,var(--accent) 50%,transparent 50%)}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
 .skills h3{font-size:18px;margin-bottom:10px}
 .skills p{color:var(--muted);font-size:16px}
@@ -99,12 +112,12 @@ footer small{display:block;margin-top:56px;color:var(--muted)}
 
     <article class="proj">
       <h3>Ghost-Writer</h3>
-      <div class="tags"><span>Python</span><span>Gemini API</span><span>OCR</span><span>Automation</span></div>
+      <div class="tags"><span>Flask</span><span>React</span><span>Gemini API</span><span>OCR</span></div>
       <dl>
         <dt>Problem</dt><dd>Handwritten engineering notes are hard to search, share and study from.</dd>
-        <dt>What I built</dt><dd>A tool that reads photos of handwritten notes with OCR and turns them into structured Markdown documents.</dd>
-        <dt>Result</dt><dd>Students skip manual transcription and get formatted lecture notes in much less time.</dd>
-        <dt>Code</dt><dd><a href="https://github.com/Geon405" rel="noopener">View on GitHub</a></dd>
+        <dt>What I built</dt><dd>A hackathon tool that reads photos of handwritten notes and turns them into formatted LaTeX and Markdown documents.</dd>
+        <dt>Result</dt><dd>Students skip manual transcription and get clean, structured notes. Submitted to ConUHacks X (2026).</dd>
+        <dt>Code</dt><dd><a href="https://github.com/Geon405/Ghost-Writer" rel="noopener">View on GitHub</a></dd>
       </dl>
     </article>
 
@@ -120,15 +133,49 @@ footer small{display:block;margin-top:56px;color:var(--muted)}
     </article>
 
     <article class="proj">
-      <h3>Layout and geometry automation</h3>
-      <div class="tags"><span>Python</span><span>3D geometry</span><span>Automation</span></div>
+      <h3>Modular building layout generator</h3>
+      <div class="tags"><span>C#</span><span>Revit API</span><span>.NET</span><span>Graph algorithms</span></div>
       <dl>
         <dt>Problem</dt><dd>Researchers spent time on repetitive layout and simulation preparation by hand.</dd>
-        <dt>What I built</dt><dd>An automated layout generator, 3D geometry workflows and reusable modeling tools.</dd>
+        <dt>What I built</dt><dd>A Revit tool that automates 3D layouts with graph-based space planning and force-directed algorithms, plus reusable modeling tools.</dd>
         <dt>Result</dt><dd>Higher throughput and less manual work across simulation prep.</dd>
-        <dt>Team</dt><dd>National Research Council Canada</dd>
+        <dt>Code</dt><dd><a href="https://github.com/Geon405/NRC-Internship" rel="noopener">View on GitHub</a> (National Research Council Canada)</dd>
       </dl>
     </article>
+
+    <h3 class="sub">More projects</h3>
+    <div class="grid">
+      <article class="mini">
+        <h3>StreamFlex</h3>
+        <p>Customer churn prediction for a subscription service. Decision Tree and Random Forest models flag churn risk and point to retention strategies.</p>
+        <div class="tags"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div>
+        <a class="repo" href="https://github.com/Geon405/StreamFlex" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="mini">
+        <h3>Flight-Delay-Prediction</h3>
+        <p>Merges flight and weather datasets to show how precipitation, wind and temperature affect delays.</p>
+        <div class="tags"><span>Python</span><span>Pandas</span><span>SQL</span><span>Matplotlib</span><span>Seaborn</span></div>
+        <a class="repo" href="https://github.com/Geon405/Flight-Delay-Prediction" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="mini">
+        <h3>BankUML</h3>
+        <p>Banking system simulation with transactions and authentication, built on OOP principles and a UML design.</p>
+        <div class="tags"><span>Java</span><span>OOP</span><span>UML</span><span>Maven</span></div>
+        <a class="repo" href="https://github.com/Geon405/BankUML" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="mini">
+        <h3>Well-FI</h3>
+        <p>Financial wellness app with expense charts, goal tracking and an AI assistant. Built for the SunLife Challenge at Concordia Hackathon IX.</p>
+        <div class="tags"><span>React</span><span>Flask</span><span>OpenAI API</span><span>Chart.js</span></div>
+        <a class="repo" href="https://github.com/Geon405/Well-FI" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="mini">
+        <h3>VolleyballClubDatabase</h3>
+        <p>Full-stack system for managing members, teams and finances for a youth volleyball club. Uses SQL triggers and a normalized schema (3NF/BCNF).</p>
+        <div class="tags"><span>PHP</span><span>MySQL</span><span>SQL triggers</span><span>HTMX</span></div>
+        <a class="repo" href="https://github.com/Geon405/VolleyballClubDatabase" rel="noopener">View on GitHub</a>
+      </article>
+    </div>
   </section>
 
   <section id="experience">
@@ -181,11 +228,23 @@ footer small{display:block;margin-top:56px;color:var(--muted)}
     </div>
   </section>
 
+  <section id="languages">
+    <h2>Languages</h2>
+    <div class="lang">
+      <div><b>English</b><div class="dots" role="img" aria-label="English: 9.5 out of 10"><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot h"></span></div></div>
+      <div><b>Korean</b><div class="dots" role="img" aria-label="Korean: 8.5 out of 10"><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot h"></span><span class="dot"></span></div></div>
+      <div><b>French</b><div class="dots" role="img" aria-label="French: 6 out of 10"><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot f"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div>
+    </div>
+  </section>
+
   <section id="education">
     <h2>Education</h2>
     <h3 style="font-size:22px">Bachelor of Computer Science</h3>
     <div class="meta">Concordia University, Montreal, QC · Jan 2023 – May 2026</div>
     <p class="muted">Big Data Analytics, Data Structures and Algorithms, Databases, Operating Systems, System Hardware, Optimization, Linear Algebra</p>
+    <h3 style="font-size:22px;margin-top:36px">Diploma of College Studies (DCS), Computer Science & Technology</h3>
+    <div class="meta">Vanier College, Montreal, QC · 2019 – 2022</div>
+    <p class="muted">Database, Ethical Hacking, Game Programming, IoT (Internet of Things), Networks, Web Programming</p>
   </section>
 
   <footer id="contact">
